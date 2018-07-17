@@ -13,7 +13,7 @@ public:
 	//
 	LogReader(const string& logFile,const string& loginsFile);
 	//
-	list<MLogRec> readLog();
+	list<MLogRec>& readLog();
 private:
 	//
 	void backup()throw(BackupException);

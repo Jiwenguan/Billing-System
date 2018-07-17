@@ -3,13 +3,18 @@
 #include"LogSender.h"
 #include"LogReader.h"
 #include"excep.h"
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include<string>
 class SocketSender:public LogSender{
 public:
 	//
 	SocketSender(const string& failFile,
 		short port,const string& ip);
 	//
-	void sendLog(list<MLogRec>& logs);
+	virtual void sendLog(list<MLogRec>& logs);
 private:
 	//
 	void connectServer();

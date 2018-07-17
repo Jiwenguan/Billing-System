@@ -1,9 +1,7 @@
-PROJ	=client
-OBJ	=Client.cpp ConsoleSender.cpp LogReader.cpp main.cpp 
-LNK	=g++
-OPT	=-c -Wall -I  
-$(PROJ):
-	$(LNK) $(OBJ) -o $(PROJ)
+client	:Client.cpp ConsoleSender.cpp LogReader.cpp main.cpp SocketSender.cpp
+	g++ *.cpp
+Client.o :
+ConsoleSender.o:
 
 clean:
-	rm $(OBJ) *.dat client
+	rm *.o *.dat client

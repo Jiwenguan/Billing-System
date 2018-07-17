@@ -1,6 +1,7 @@
 #include"LogSender.h"
 #include"data.h"
 #include<list>
+
 class ConsoleSender:public LogSender{
 public:
 	//
