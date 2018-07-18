@@ -7,8 +7,11 @@ Server::Server(LogDao& dao,short port,const string ip):
 	//m_socket是一个网络连接对象
 }
 void Server::dataMine(void){
-	cout<<"开启存储线程"<<endl;
+	//cout<<"开启存储线程"<<endl;
+	
 	m_store.start();//开启存储线程
+	m_socket.acceptClient();
+	while(1);
 	return ;
 
 }

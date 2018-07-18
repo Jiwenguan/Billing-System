@@ -5,7 +5,6 @@
 using namespace std;
 class LogThread{
 public:
-	LogThread();
 	void start(void);
 	virtual void* run(void){cout<<"我被调用啦"<<endl;}
 	virtual ~LogThread(){}

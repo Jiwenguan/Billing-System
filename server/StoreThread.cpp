@@ -1,7 +1,8 @@
 #include"StoreThread.h"
 extern LogQueue lqueue;
 StoreThread::StoreThread(LogDao& dao):m_dao(dao){
-	//构造好存储线程对象	
+	cout<<"构造好存储线程对象"<<endl;	
+	start();
 }
 void* StoreThread::run(void){
 	cout<<"StoreThread::run()开始"<<endl;
@@ -12,8 +13,10 @@ void* StoreThread::run(void){
 		//多态 插入到文件中
 		m_dao.insert(mrc);
 	}
+	delete this;
 	cout<<"StoreThread::run()结束"<<endl;
+	
 }
 StoreThread::~StoreThread(){
-	
+	cout<<"～StoreThread()"<<endl;
 }

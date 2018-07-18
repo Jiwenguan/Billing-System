@@ -4,8 +4,11 @@
 #include"FileDao.h"
 #include"LogThread.h"
 #include"ClientThread.h"
-
+#include"StoreThread.h"
 #include"data.h"
+#include"ServerSocket.h"
+#include"excep.h"
+#include"LogDao.h"
 using namespace std;
 LogQueue lqueue;
 int main(){

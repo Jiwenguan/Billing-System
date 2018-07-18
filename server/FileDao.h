@@ -3,6 +3,7 @@
 #include"LogDao.h"
 #include<iostream>
 #include<fstream>
+#include"data.h"
 using namespace std;
 class FileDao:public LogDao{
 public:

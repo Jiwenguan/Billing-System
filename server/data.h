@@ -10,12 +10,12 @@ struct MLogRec{
 	unsigned int logintime;
 	unsigned int logouttime;
 	unsigned int durations;
-	friend ostream& operator<<(ostream& os,MLogRec & mlogrec){
-		os<<"编号:"<<mlogrec.logname<<",pid: "
-		  <<mlogrec.pid<<",ip: "
-		<<mlogrec.logip<<",登入时间： "
-		<<mlogrec.logintime<<",登出时间： "
-		<<mlogrec.logouttime<<",在线时长： "
+	friend ostream& operator<<(ostream& os,const MLogRec & mlogrec){
+		os<<"logname:"<<mlogrec.logname<<",pid:"
+		  <<mlogrec.pid<<",ip:"
+		<<mlogrec.logip<<",logintime:"
+		<<mlogrec.logintime<<",logouttime: "
+		<<mlogrec.logouttime<<",durations: "
 		<<mlogrec.durations<<endl;
 	}
 };

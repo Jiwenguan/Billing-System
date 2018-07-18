@@ -24,8 +24,6 @@ ServerSocket::ServerSocket(short port,const string ip){
 		cout<<"监听失败"<<endl;
 		//throw
 	}
-	//准备接受客户端发来的请求
-	acceptClient();
 }
 void ServerSocket::acceptClient(void){
 	cout<<"acceptClient()开始"<<endl;
@@ -36,9 +34,9 @@ void ServerSocket::acceptClient(void){
 			continue;
 		}
 		cout<<"与客户端建立连接"<<endl;
-		ClientThread cthread(cfd);
+		ClientThread * cthread=new ClientThread(cfd);
 		cout<<"子进程启动"<<endl;
-		cthread.start();
+		cthread->start();
 	}	
 	//
 }

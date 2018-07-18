@@ -8,8 +8,7 @@ FileDao::~FileDao(){
 	m_ofs.close();
 }
 void FileDao::insert(const MLogRec& log){
-	cout<<"向连表中插入一个元素开始"<<endl;
-	m_ofs<<(const char*)(&log);
-	cout<<"向连表中插入一个元素结束"<<endl;
+	m_ofs<<log;
+	//cout<<log;
 }
 

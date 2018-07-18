@@ -11,9 +11,11 @@ void* ClientThread::run(void){
 		if(r<=0)break;
 		lqueue<<mrc;
 	}
-	cout<<"ClientThread::run()结束"<<endl;
+	cout<<"ClientThread::run()结束"<<endl;	
+	delete this;
 	return NULL;
 }	
 ClientThread::~ClientThread(){
+	cout<<"～ClientThread"<<endl;
 	close(m_connfd);
 }
